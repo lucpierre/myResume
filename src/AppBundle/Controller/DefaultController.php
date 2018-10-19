@@ -27,7 +27,7 @@ class DefaultController extends Controller
             array(),
             array('date' => 'DESC')
         );
-        return $this->render('AppBundle::certification.html.twig' , array(
+        return $this->render('AppBundle:Default:certification.html.twig' , array(
             'listCertifications' => $listCertifications
         ));
     }
@@ -45,7 +45,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listExperiences = $em->getRepository('AppBundle:Experience')->findAll();
-        return $this->render('AppBundle::experience.html.twig', array(
+        return $this->render('AppBundle:Default/certification.html.twig', array(
             'listExperiences' => $listExperiences
         ));
     }
