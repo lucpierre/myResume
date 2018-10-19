@@ -27,7 +27,7 @@ class DefaultController extends Controller
             array(),
             array('date' => 'DESC')
         );
-        return $this->render('AppBundle:Default:certification.html.twig' , array(
+        return $this->render('AppBundle::certification.html.twig' , array(
             'listCertifications' => $listCertifications
         ));
     }
@@ -36,7 +36,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listSkills = $em->getRepository('AppBundle:Skill')->findAll();
-        return $this->render('AppBundle:Default:skill.html.twig' , array(
+        return $this->render('AppBundle::skill.html.twig' , array(
             'listSkills' => $listSkills
         ));
     }    
@@ -45,7 +45,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listExperiences = $em->getRepository('AppBundle:Experience')->findAll();
-        return $this->render('AppBundle:Default:experience.html.twig', array(
+        return $this->render('AppBundle::experience.html.twig', array(
             'listExperiences' => $listExperiences
         ));
     }
@@ -54,7 +54,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listHobbies = $em->getRepository('AppBundle:Hobbies')->findAll();
-        return $this->render('AppBundle:Default:hobbies.html.twig' , array(
+        return $this->render('AppBundle::hobbies.html.twig' , array(
             'listHobbies' => $listHobbies
         ));
     }
