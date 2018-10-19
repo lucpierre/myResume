@@ -1,0 +1,41 @@
+.bg-footer
+{
+	background-color: #27344c; /*Blue-black*/
+	border-top: solid 2px #f0ad4e; 
+	color: #ffffff;
+}
+
+.bg-navbar
+{
+	background-color: #27344c; /*Blue-black*/
+	border-bottom: solid 2px #f0ad4e; 
+}
+
+.bg-1
+{
+	background-color: #27344c;	
+	color: #ffffff;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.bg-2
+{
+	background-color : #ebebeb;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.imgCv:hover
+{
+	color : #f0ad4e;
+}
+
+.bg-card-deck
+{
+	background-color: #27344c;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	padding-right: 1em;
+	padding-left: 1em;
+}

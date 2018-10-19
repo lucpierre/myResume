@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+    <div class="container-fluid bg-1 text-center">
+        <h1 class="display-4 text-center">Lucquiaud Pierre</h1>
+        <p class="lead text-center">{{ age }} ans, Futur Developpeur Back-End </p>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <h2>Qui suis-je ?</h2>
+        <p class="text-center">
+            Passionné de nouvelles technologies, je viens d'une petite commune rurale du sud de la Vienne (86).
+        </p>
+        <p class="text-center">Passionné par le web et les opportunitées, pratiquement infinie, qu'il ouvre, j'essaie de me former sur les dernières technologies et bonnes-pratiques propres aux différents langages et aux différentes technologies que je suis amené à utiliser.
+        </p>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <h2>Télécharger mon CV</h2>
+        <p>
+            <h1 ><a class="oi oi-person imgCv" title="person" aria-hidden="true" href="{{ asset('assets/pdf/cv.pdf') }}"></a></h1>
+        </p>
+    </div>
+
+    <div class="container-fluid bg-card-deck">
+        <div class="card-deck">
+                <div class="card-body">
+                    <a class="btn btn-warning btn-lg btn-block" href="https://www.linkedin.com/in/pierre-lucquiaud-969793172" role="button">LinkedIn</a>
+                </div>
+                <div class="card-body">
+                        <a class="btn btn-warning btn-lg btn-block" href="https://github.com/lucpierre" role="button">GitHub</a>
+                    </p>
+                </div>
+            <div class="card-body bg-1">
+                    <a class="btn btn-warning btn-lg btn-block" href="{{path('app_contact')}}" role="button">E-mail</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

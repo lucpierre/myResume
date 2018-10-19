@@ -1,0 +1,29 @@
+app_home:
+    path:      /
+    defaults:
+        _controller: AppBundle:Default:index
+
+app_certification:
+    path:   /certification
+    defaults:
+        _controller: AppBundle:Default:certification
+
+app_skill:
+    path:   /skill
+    defaults:
+        _controller: AppBundle:Default:skill
+
+app_experience:
+    path:   /experience
+    defaults:
+        _controller: AppBundle:Default:experience
+
+app_hobbies:
+    path:   /hobbies
+    defaults:
+        _controller: AppBundle:Default:hobbies
+
+app_contact:
+    path:   /contact
+    defaults:
+        _controller: AppBundle:Default:contact
