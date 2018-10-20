@@ -2,10 +2,7 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Carbon\Carbon;
 // A retirer une fois le formulaire pret
 use Symfony\Component\HttpFoundation\Response;
@@ -27,7 +24,7 @@ class DefaultController extends Controller
             array(),
             array('date' => 'DESC')
         );
-        return $this->render('AppBundle:Default:certification.html.twig' , array(
+        return $this->render('@App/certification.html.twig' , array(
             'listCertifications' => $listCertifications
         ));
     }
@@ -36,7 +33,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listSkills = $em->getRepository('AppBundle:Skill')->findAll();
-        return $this->render('AppBundle::skill.html.twig' , array(
+        return $this->render('@App/skill.html.twig' , array(
             'listSkills' => $listSkills
         ));
     }    
@@ -45,7 +42,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listExperiences = $em->getRepository('AppBundle:Experience')->findAll();
-        return $this->render('AppBundle:Default/certification.html.twig', array(
+        return $this->render('@App/experience.html.twig', array(
             'listExperiences' => $listExperiences
         ));
     }
@@ -54,7 +51,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $listHobbies = $em->getRepository('AppBundle:Hobbies')->findAll();
-        return $this->render('AppBundle::hobbies.html.twig' , array(
+        return $this->render('@App/hobbies.html.twig' , array(
             'listHobbies' => $listHobbies
         ));
     }
