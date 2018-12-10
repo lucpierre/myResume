@@ -3,7 +3,17 @@
 {% block title %}Portfolio{% endblock %}
 
 {% block body %}
-    <div class="container-fluid bg-1  text-center row">
+    
+    <!--FlashBag-->
+    {% if app.session.flashBag.has('notice-mail') %}
+        <div>
+            {{ app.session.flashBag.get('notice-mail') }}
+        </div>
+    {% endif %}
+
+
+    <!--Intro-->
+    <div class="container-fluid bg-1  text-center row big-section">
         <div class="container-fluid col">
             <h1 class="display-4">Lucquiaud Pierre</h1>
             <p class="lead">{{ age }} ans, Futur Developpeur Back-End </p>
@@ -12,59 +22,71 @@
                 <div class="col">
                     <h6>Télécharger mon CV</h6>
                     <p>
-                        <a href="{{ asset('assets/pdf/cv.pdf') }}"><img src="{{ asset('assets/img/paper-plane.png')}}" alt="paper-plane"></a>
+                        <a href="{{ asset('assets/pdf/cv.pdf') }}"><button type="button" class="btn btn-lg">Par ici !</button></a>
                     </p>
                 </div>
                 <div class="col">
                     <h6>Contactez-moi !</h6>
                     <p>
-                        <a href="#contact"><button type="button" class="btn btn-primary btn-lg">Par ici !</button></a>
+                        <a href="{{path('app_contact')}}"><button type="button" class="btn btn-lg">Par ici !</button></a>
                     </p>
                 </div>
             </div>
         </div>
         <div class="container-fluid col">
             <p>
-                <!--<img src="{{ asset('assets/img/me.png')}}" alt="me">-->
+                <img src="{#{{ asset('assets/img/me.png')}}#}" alt="me" id="MyPhoto" class="rounded">
             </p>
         </div>
 
     </div>
 
+
+    <!--WhoAmI-->
     <div class="container-fluid  bg-2 text-center row big-section">
-        <div class="col">
-            <p class="text-center">
-                Néophyte dans le developpement web et passionné de nouvelles technologies, je m'intersse aux différentes techniques de développements ainsi qu'aux différents outils que le monde du web propose.
+        <div class="col small-section">
+            <h4>Un néophyte dans l'univers du web</h4>
+            <p>
+                Passionné de nouvelles technologies, je me suis très vite intéressé aux différents aspects offert par le web.
             </p>
-            <p class="text-center">Passionné par le web et les opportunitées, pratiquement infinie, qu'il ouvre, j'essaie de me former sur les dernières technologies et bonnes-pratiques propres aux différents langages et aux différentes technologies que je suis amené à utiliser.
+            <p>
+                Motivé, autodidacte, j'essaie de me former sur les dernières technologies ainsi que les bonnes-pratiques liées aux différents langages et outils que je suis amené à utiliser.
             </p>
         </div>
-        <div class="col bg-1">
+        <div class="col bg-3">
             <h2 class="section-title">Qui suis-je ?</h2>
         </div>
     </div>
 
-    <div class="container-fluid bg-2 text-center">
-        <h2>Télécharger mon CV</h2>
-        <p>
-            <h1 ><a class="oi oi-person imgCv" title="person" aria-hidden="true" href="{{ asset('assets/pdf/cv.pdf') }}"></a></h1>
-        </p>
-    </div>
 
-    <div class="container-fluid bg-card-deck">
+    <!--certifications-->
+    {{ render(controller("AppBundle:Default:certification")) }}
+
+    <!--skills-->
+    {{ render(controller("AppBundle:Default:skill")) }}
+
+    <!--experiences-->
+    {{ render(controller("AppBundle:Default:experience")) }}
+
+    <!--hobbies-->
+    {{ render(controller("AppBundle:Default:hobbies")) }}
+
+{% endblock %}
+
+
+{% block footer %}
+    <div class="container-fluid bg-4">
         <div class="card-deck">
                 <div class="card-body">
-                    <a class="btn btn-warning btn-lg btn-block" href="https://www.linkedin.com/in/pierre-lucquiaud-969793172" role="button">LinkedIn</a>
+                    <a class="btn btn-lg btn-block" href="https://www.linkedin.com/in/pierre-lucquiaud-969793172" role="button">LinkedIn</a>
                 </div>
                 <div class="card-body">
-                        <a class="btn btn-warning btn-lg btn-block" href="https://github.com/lucpierre" role="button">GitHub</a>
+                        <a class="btn btn-lg btn-block" href="https://github.com/lucpierre" role="button">GitHub</a>
                     </p>
                 </div>
-            <div class="card-body bg-1">
-                    <a class="btn btn-warning btn-lg btn-block" href="{{path('app_contact')}}" role="button">E-mail</a>
+            <div class="card-body">
+                    <a class="btn btn-lg btn-block" href="@App/contact.html.twig" role="button">E-mail</a>
             </div>
         </div>
     </div>
 {% endblock %}
-
-{% block footer %}{% endblock %}

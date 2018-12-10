@@ -1,9 +1,16 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Diplômes{% endblock %}
-
-{% block body %}
-    <div class="container-fluid bg-1 text-center">
-    	<h1>Mes diplômes</h1>
+<div class="container-fluid  bg-2 text-center row big-section transition" id="certifications">
+    <div class="col bg-3">
+        <h2 class="section-title">Mes Diplomes</h2>
     </div>
-{% endblock %}
+
+    <div class="col small-section">
+            {% for certification in listCertifications %}
+                <h4>{{certification.name}}</h4>
+                <p class="lead">{{certification.place}} en {{certification.date}}</p>
+                <p>{{certification.description}}</p>
+                {% if certification.date != 2018 %}
+                    <hr />
+                {% endif %}
+            {% endfor %}
+    </div>
+</div>

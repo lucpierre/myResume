@@ -1,9 +1,12 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Expériences{% endblock %}
-
-{% block body %}
-    <div class="container-fluid bg-1 text-center">
-    	<h1>Mes expériences</h1>
+<div class="container-fluid  bg-2 text-center row big-section transition" id="experiences">
+    <div class="col-sm-8 small-section">
+            {% for experience in listExperiences %}
+                <h4>{{experience.title}}</h4>
+                <p class="lead">{{experience.place}} en {{experience.date}}</p>
+                <p>{{experience.description}}</p>
+            {% endfor %}
     </div>
-{% endblock %}
+    <div class="col-sm-4 bg-3">
+        <h2 class="section-title">Mes Expériences</h2>
+    </div>
+</div>

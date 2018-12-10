@@ -1,8 +1,9 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Compétences{% endblock %}
-
-{% block body %}
-    <div class="container-fluid bg-1 text-center">
-    </div>
-{% endblock %}
+<div class="container-fluid bg-4 text-center row big-section transition" id="skills">
+    {% for skill in listSkills %}
+        <div class="skills col">
+            <h4>{{skill.name}}</h4>
+            <p class="lead">{{skill.level}}</p>
+            <img src="{{skill.logo}}" alt="language-logo" class="language-logo" />
+        </div>
+    {% endfor %}
+</div>

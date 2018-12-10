@@ -2,6 +2,9 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
+
 /**
  * SkillRepository
  *
@@ -10,4 +13,10 @@ namespace AppBundle\Repository;
  */
 class SkillRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function countSkills()
+	{
+		$qb = $this->createQueryBuilder('s');
+		$qb->count();
+		
+	}
 }

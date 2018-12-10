@@ -1,33 +1,106 @@
+.bg-1, .bg-2, .bg-3
+{
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+.bg-1, .bg-3
+{
+	color: #ffffff;
+}
+
 .bg-1
 {
-	background-color: #27344c;	
-	color: #ffffff;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	background-color: #27334b;	
 }
 
 .bg-2
 {
-	background-color : #ebebeb;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	background-color : #c8c8c8;
 }
 
-.imgCv:hover
+.bg-3
 {
-	color : #f0ad4e;
+	background-color : #f4a460;
 }
 
-.bg-card-deck
+.bg-4
 {
-	background-color: #27344c;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	padding-right: 1em;
-	padding-left: 1em;
+	background-color: #ebebeb;
 }
+
+.section-title
+{
+	position: relative;
+	top : 40%;
+	width: 100%;
+}
+
 
 .big-section
 {
-	padding-top: 0px;
+	padding : 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.col, .col-sm-4, .col-sm-8
+{
+	padding: 3em;
+}
+
+#MyPhoto
+{
+	width: 200px;
+	height: 260px;
+}
+
+.language-logo
+{
+	width: 150px;
+	height: 150px;
+}
+
+
+.btn
+{
+	color: #ffffff;
+	background-color: #f4a460;
+}
+
+.btn-block
+{
+	color: #ffffff;
+	background-color: #27334b;
+}
+
+.form
+{
+	padding: 5em;
+}
+
+.label-form
+{
+	font-size: 150%;
+}
+
+.form .btn
+{
+	color: #ffffff;
+	background-color: #27334b;
+}
+
+.form .btn-block
+{
+	color: #ffffff;
+	background-color: #27334b;
+}
+
+#top
+{
+	position: fixed;
+	z-index: 100;
+	float: right;
+	top: 90%;
+	left: 95%;
 }
