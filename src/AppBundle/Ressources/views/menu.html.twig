@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{ path('app_home')}}">Lucquiaud Pierre</a>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{path('app_home')}}">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link transition" href="{{path('app_home')}}#certifications">Diplomes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link transition" href="{{path('app_home')}}#skills">Compétences</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link transition" href="{{path('app_home')}}#experiences">Éxperiences</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <a class="nav-link transition" href="{{path('app_contact')}}"><button type="button" class="btn">Contactez-moi !</button></a>
+    </span>
+  </div>
+</nav>

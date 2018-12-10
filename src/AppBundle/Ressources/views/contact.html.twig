@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+	<div class="container-fluid bg-1">
+		<h1>Contactez-moi</h1>
+	</div>
+	<div class="container-fluid bg-2">
+		<div class="container-fluid form">
+			{{ form_start(form) }}
+			{{ form_errors(form) }}
+
+			<div class="form-group">
+				{{ form_label(form.author, "Nom", {'label_attr': {'class': 'label-form'}}) }}
+				{{ form_errors(form.author) }}
+				{{ form_widget(form.author, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group">
+				{{ form_label(form.email, "E-mail", {'label_attr': {'class': 'label-form'}}) }}
+				{{ form_errors(form.email) }}
+				{{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group">
+				{{ form_label(form.object, "Objet", {'label_attr': {'class': 'label-form'}}) }}
+				{{ form_errors(form.object) }}
+				{{ form_widget(form.object, {'attr': {'class': 'form-control'}}) }}
+			</div>
+			<div class="form-group">
+				{{ form_label(form.body, "Message", {'label_attr': {'class': 'label-form'}}) }}
+				{{ form_errors(form.body) }}
+				{{ form_widget(form.body, {'attr': {'class': 'form-control'}}) }}
+			</div>
+
+			{{ form_widget(form.submit, {'attr': {'class': 'btn', 'value': 'Envoyer !'}}) }}
+
+			{{ form_rest(form) }}
+			{{ form_end(form) }}
+
+		</div>
+	</div>
+{% endblock %}
